@@ -2,8 +2,8 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Home from "../screens/Home";
-import Notifications from "../screens/Notifications";
+import Categories from "../screens/Categories";
+import Favorites from "../screens/Favorites";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Stack = createNativeStackNavigator<RootNativeStackParamList>();
@@ -11,17 +11,18 @@ const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
 function DrawerNavigation() {
   return (
-    <Drawer.Navigator initialRouteName="Home">
+    <Drawer.Navigator initialRouteName="Categories">
       <Drawer.Screen
-        name="Home"
-        component={Home}
+        name="Categories"
+        component={Categories}
         options={{
-          drawerIcon: ({ color, size }) => <Ionicons name="star" color={color} size={size} />,
+          title: "All Categories",
+          drawerIcon: ({ color, size }) => <Ionicons name="list" color={color} size={size} />,
         }}
       />
       <Drawer.Screen
-        name="Notifications"
-        component={Notifications}
+        name="Favorites"
+        component={Favorites}
         options={{
           drawerIcon: ({ color, size }) => <Ionicons name="star" color={color} size={size} />,
         }}

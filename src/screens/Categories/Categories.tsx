@@ -2,18 +2,18 @@ import React from "react";
 import { View, Button, StyleSheet, Text } from "react-native";
 import type { DrawerScreenProps } from "@react-navigation/drawer";
 
-type HomeScreenProps = DrawerScreenProps<RootDrawerParamList, "Home">;
+type CategoriesScreenProps = DrawerScreenProps<RootDrawerParamList, "Categories">;
 
-const Home: RNElement<HomeScreenProps> = ({ navigation }) => {
+const Categories: RNElement<CategoriesScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <Button onPress={() => navigation.navigate("Notifications")} title="Go to notifications" />
+      <Text>Categories Screen</Text>
+      <Button onPress={() => navigation.navigate("Favorites")} title="Go to favorites" />
     </View>
   );
 };
 
-export { Home };
+export { Categories };
 
 const styles = StyleSheet.create({
   container: {

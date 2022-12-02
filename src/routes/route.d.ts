@@ -10,7 +10,7 @@ declare global {
   };
 
   type RootDrawerParamList = {
-    Home: undefined;
-    Notifications: undefined;
+    Categories: undefined;
+    Favorites: undefined;
   };
 }
