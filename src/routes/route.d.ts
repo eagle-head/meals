@@ -7,6 +7,8 @@ declare global {
 
   type RootNativeStackParamList = {
     Drawer: undefined;
+    MealsOverview: undefined;
+    MealDetail: undefined;
   };
 
   type RootDrawerParamList = {
